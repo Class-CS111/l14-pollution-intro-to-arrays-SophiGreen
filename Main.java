@@ -32,9 +32,41 @@ class Main
 
   public static void main(String[] args) 
   {
-		// DECLARATION SECTION
+		// DECLARATION + INITIALIZATION SECTION
+    int size = 20; 
+    double[] co2Levels = new double[size];
+    int[] years = new int[size];
 
-		// INITIALIZATION SECTION
+    co2Levels[0] = 371.32;
+    co2Levels[1] = 373.45;
+    co2Levels[2] = 375.98;
+    co2Levels[3] = 377.70;
+    co2Levels[4] = 379.98;
+    co2Levels[5] = 382.09;
+    co2Levels[6] = 384.03;
+    co2Levels[7] = 385.83;
+    co2Levels[8] = 387.64;
+    co2Levels[9] = 390.10;
+    co2Levels[10] = 391.85;
+    co2Levels[11] = 394.06;
+    co2Levels[12] = 396.74;
+    co2Levels[13] = 398.87;
+    co2Levels[14] = 401.01;
+    co2Levels[15] = 404.41;
+    co2Levels[16] = 406.76;
+    co2Levels[17] = 408.72;
+    co2Levels[18] = 411.66;
+    co2Levels[19] = 414.24;
+
+
+    //int currentYear = 2001;
+    for(int i = 0; i < years.length; i++) {
+      years[i] = 2001 + i;
+      //currentYear++;
+    }
+    
+
+		
 
 		// INPUT SECTION 
 
@@ -49,6 +81,21 @@ class Main
     System.out.print("Year");
     UtilityBelt.printCentered(55,"CO₂ in Atmosphere (ppm)");
 
+    Main.printBar(371.32);
+    Main.printBar(395.64);
+    Main.printBar(-89.35);
+
+
+
+    
+
+  }
+  public static void printBar(double data) {
+    int numDrums = (int)(data - 360);
+    for(int i = 0; i < numDrums; i++) {
+      System.out.print("🛢");
+    }
+    System.out.println(" " + data);
   }
 
 }
